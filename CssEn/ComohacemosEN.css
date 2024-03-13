@@ -1,0 +1,1204 @@
+@import url(../normalize.css);
+
+@media screen and (min-width: 320px) {
+
+
+  :root{
+    --color-primary:#04b4bc  ;
+    --color-secundary:rgb(39, 171, 189);
+    --color-terciary:rgb(1, 156, 184);
+    --color-4: rgb(100, 98, 98);
+    scroll-behavior: smooth;
+  }
+  
+  header{
+      font-family: 'Varela Round', sans-serif;
+      overflow-x: hidden;
+      height: 100%;
+  }
+  
+  
+  body{
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .logo{
+    display: none;
+  }
+  
+  .idiomas{
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    list-style: none;
+    padding-top: 2%;
+  }
+  
+  .menu{
+    display: none;
+  }
+  
+  
+  .idiomas button{
+    background-color:rgb(241, 240, 240);
+    cursor: pointer;
+    padding: 0.3em 0.5em;
+    border-radius: 0.5em;
+    min-height: 0.1em;
+    font-size: 15px;
+    color:var(--color-primary);
+    border: 0;
+    margin-top: 8px;
+  }
+  .idiomas a{
+    text-decoration: none;
+  }
+  
+  .header {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+      box-shadow: none;
+      background-color:var(--color-primary);
+      position:absolute;
+      height: 60px;
+      overflow: hidden;
+      z-index: 10;
+  }
+  .main {
+      margin: 0 auto;
+      display: block;
+      height: 100%;
+      margin-top: 60px;
+  }
+  .mainInner{
+      display: table;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+  }
+  .mainInner div{
+      display:table-cell;
+      vertical-align: middle;
+      font-size: 3em;
+      font-weight: bold;
+      letter-spacing: 1.25px;
+  }
+  #sidebarMenu {
+      height: 100%;
+      position:absolute;
+      left: 0;
+      width: 250px;
+      height: 50dvh;
+      margin-top: 60px;
+      transform: translateX(-250px);
+      transition: transform 250ms ease-in-out;
+      background:var(--color-primary);
+      z-index: 1;
+  }
+  .sidebarMenuInner{
+      margin:0;
+      padding:0;
+      border-top: 1px solid rgba(52, 206, 245, 0.1);
+  }
+  .sidebarMenuInner li{
+      list-style: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 20px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(97, 96, 96, 0.1);
+  }
+  .sidebarMenuInner li span{
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.50);
+  }
+  .sidebarMenuInner li a{
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  input[type="checkbox"]:checked ~ #sidebarMenu {
+      transform: translateX(0);
+  }
+  
+  input[type=checkbox] {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      display: none;
+  }
+  .sidebarIconToggle {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      cursor: pointer;
+      position: absolute;
+      z-index: 99;
+      height: 100%;
+      width: 100%;
+      top: 22px;
+      left: 15px;
+      height: 22px;
+      width: 22px;
+  }
+  .spinner {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color:white;
+  }
+  .horizontal {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      margin-top: 3px;
+  }
+  .diagonal.part-1 {
+      position: relative;
+      transition: all 0.3s;
+      box-sizing: border-box;
+      float: left;
+  }
+  .diagonal.part-2 {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      margin-top: 3px;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      opacity: 0;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      transform: rotate(135deg);
+      margin-top: 8px;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      transform: rotate(-135deg);
+      margin-top: -9px;
+  }
+  
+  /*SECCION COMO LO HACEMOS*/
+  
+  .sec-comolohacemos{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 170dvh;
+      background-color: #ffffff;
+  }
+  
+  .sec-comolohacemos h2{
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  position: absolute;
+  top: 15%;
+  animation: slideleft 2s ease-out forwards;
+  }
+  
+  @keyframes slideleft {
+    0% {
+      transform: translateX(50px); /* Desplazamiento inicial hacia abajo */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* Sin desplazamiento vertical */
+      opacity: 1;
+    }
+  }
+  
+  .fondo-titulo{
+    width: 100%;
+    height: 20dvh;
+    background-image: url(../img-comolohacemos/nosotros.jpg);
+    background-position: center;
+    position: absolute;
+    top: 10%;
+  }
+  
+  .container-comohacemos{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+  }
+  
+  .box-1{
+    width: 300px;
+    height: 200px;
+    background-color:#04b3bc36;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
+    border-radius: 5%;
+    margin-top: 35px;
+    opacity: 0;
+    animation: appearFromBottom 2s ease forwards; 
+    margin-left: 10%;
+  }
+  
+  .box-3{
+    display: none;
+  }
+  
+  @keyframes appearFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%); /* La tarjeta está fuera de la pantalla */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* La tarjeta aparece desde abajo hacia arriba */
+    }
+  }
+  
+  .box-2{
+    width: 150px;
+    height: 350px;
+    margin-top: 105px;
+    margin-right: 40%;
+    background-color: white;
+  }
+  
+  
+.container-comohacemos{
+  width: 100%;
+  height: 35%;
+  margin-top: 25%;
+}
+
+.contenedor-video {
+  position: relative;
+  top: -10%;
+  width: 100%;
+  height: 100%;
+  background-color:var(--color-primary);
+  animation: appearFromBottom 3s ease forwards; 
+  }
+  
+  .contenedor-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #41c9db;
+    margin-top: 75%;
+  }
+  
+  .img-cel{
+    width: 299px;
+    height: 383px;
+  }
+  
+  .contenido-cel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -346px;
+    left: 66px;
+    width: 20dvh;
+    height: 36dvh;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  
+  .img-contenido{
+    padding: 1px;
+    width: 125px;
+    height: 99px;
+    animation: slideleft 1s ease-out forwards;
+  }
+  
+  .img1{
+      width: 110px;
+      opacity: 0;
+  }
+  
+  .img2{
+      width: 105px;
+      opacity: 0;
+      margin-left: -11px;
+  }
+  
+  .img3{
+      width: 115px;
+      height: 100px;
+      opacity: 0;
+  }
+  
+  @keyframes slideleft {
+      0% {
+        transform: translateX(50px); /* Desplazamiento inicial hacia abajo */
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0); /* Sin desplazamiento vertical */
+        opacity: 1;
+      }
+    }
+    
+    /* Agregar un retraso a cada tarjeta para crear un efecto secuencial */
+    .contenido-cel img:nth-child(1) {
+      animation-delay: 2s;
+    }
+    .contenido-cel img:nth-child(2) {
+      animation-delay: 3s;
+    }
+    .contenido-cel img:nth-child(3) {
+      animation-delay: 4s;
+    }
+  
+  
+  
+  .box-1 h6{
+      font-size: 18px;
+      color: rgb(39, 39, 39);
+      text-align: center;
+  }
+  
+  .box-1 p{
+      font-size: 15px;
+      color: rgb(27, 27, 27);
+      padding: 5px;
+      margin-top: -20px;
+  }
+  
+  /*FOOTER*/
+  
+  
+  .logo-foot img{
+    width: 220px;
+  }
+  
+  .footer {
+    height: 60dvh;
+    background-color:  #04b4bc ;
+    color: rgb(59, 59, 59);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .section p{
+    font-size: 14px;
+    animation: slideInFromBottom 4s ease forwards;
+  }
+  
+  .section-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .social-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    animation: slideInFromBottom 5s ease forwards;
+  
+  }
+  
+  .social-links li{
+    margin-left: -38px;
+  }
+  
+  .social-links li i{
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  .fa-brands{
+    color: rgb(65, 64, 64);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    animation: slideInFromBottom 6s ease forwards;
+  }
+  
+  }
+  
+  
+  /*MEDIA CELULAR L*/
+  
+  @media screen and (min-width: 425px){
+    .box-2{
+      width: 150px;
+      height: 350px;
+      margin-top: 105px;
+      margin-right: 37%;
+      background-color: white;
+    }
+     
+.container-comohacemos{
+  width: 100%;
+  height: 38%;
+  margin-top: 25%;
+}
+
+.contenedor-video {
+  position: relative;
+  top: -10%;
+  width: 100%;
+  height: 100%;
+  background-color:var(--color-primary);
+  animation: appearFromBottom 3s ease forwards; 
+  }
+  
+  .box-1{
+    margin-left: 15%;
+  }
+  }
+  
+    /*-------------------MEDIA TABLET--------------------*/
+    
+  @media screen and (min-width: 768px){
+  
+    
+    /*HEADER*/
+  
+    .logo-header{
+      width: 190px;
+      display: block;
+      position: absolute;
+      left: -0.2dvh;
+      top: 1%;
+      border-radius: 5%;
+    }
+  
+    .header{
+      display: none;
+    }
+    .main{
+      display: none;
+    }
+    #sidebarMenu {
+      display: none;
+  }
+  .sidebarIconToggle{
+    display: none;
+  }
+  
+  header{
+    height: 14dvh;
+  }
+  
+  .menu {
+    width: 100%;
+    height: 17dvh;
+    display: block;
+    background-color:#04b4bc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-items {
+    margin-top: 7dvh;
+    margin-right: -9.2%;
+    list-style: none;
+    display: flex;
+    align-items:center;
+    gap: 5px;
+    font-size: 15.7px;
+  }
+  
+  .menu-items li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-items li:last-child {
+    margin-right: 0
+  }
+  
+  .menu-items a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 2s ease-in;
+  }
+  
+  
+  .menu-items a:hover {
+    text-decoration: underline 1.5px #139aa1;
+    cursor: pointer;
+  }
+  
+  /* BUTTON IDIOMAS */
+  .radio-inputs {
+    position: relative;
+    top: -7.2dvh;
+    left: -13%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color:#b9b9b98e;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 68px;
+    font-size: 12px;
+  }
+  
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name a{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+     padding: .5rem 0;
+    padding-bottom: 3px;
+    text-align: center;
+    color:#fff;
+    transition: all .15s ease-in-out;
+  }
+  
+  .radio-inputs .radio input:checked + .name a{
+    background-color: #00AEBD;
+    font-weight: 600;
+  }
+  
+  
+    /*seccion como lo hacemos*/
+    
+  .sec-comolohacemos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 180dvh;
+    background-color: #ffffff;
+  }
+  
+  .fondo-titulo{
+    width: 100%;
+    height: 30dvh;
+    background-image: url(../img-comolohacemos/nosotros.jpg);
+    background-size: cover;
+    background-position:center;
+    position: absolute;
+    top: 22%;
+  }
+  
+  .sec-comolohacemos h2{
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    animation: slideleft 2s ease-out forwards;
+  }
+  
+  @keyframes slideleft {
+    0% {
+      transform: translateX(50px); /* Desplazamiento inicial hacia abajo */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* Sin desplazamiento vertical */
+      opacity: 1;
+    }
+  }
+  
+  
+  .box-1{
+  width: 300px;
+  height: 200px;
+  background-color:#04b3bc36;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
+  border-radius: 5%;
+  opacity: 0;
+  animation: appearFromBottom 2s ease forwards; 
+  position: absolute;
+  top: 115%;
+  margin-left: -25%;
+  }
+  
+  .box-3{
+    display: block;
+    width: 300px;
+    height: 200px;
+    background-color:#04b3bc36;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
+    border-radius: 5%;
+    opacity: 0;
+    animation: appearFromBottom 2s ease forwards; 
+    position: absolute;
+    top: 140%;
+    }
+  
+  @keyframes appearFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); /* La tarjeta está fuera de la pantalla */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* La tarjeta aparece desde abajo hacia arriba */
+  }
+  }
+  
+  .box-2{
+  width: 150px;
+  height: 350px;
+  background-color: transparent;
+  position: absolute;
+  left: 95%;
+  top: -22%;
+  }
+ 
+.container-comohacemos{
+  width: 90%;
+  height: 55%;
+  margin-top: 25%;
+}
+
+.contenedor-video {
+  position: relative;
+  top: -70%;
+  width: 100%;
+  height: 100%;
+  background-color:var(--color-primary);
+  animation: appearFromBottom 3s ease forwards; 
+  }
+  
+  
+  .img-cel{
+  width: 299px;
+  height: 383px;
+  }
+  
+  .contenido-cel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -346px;
+  left: 66px;
+  width: 20dvh;
+  height: 36dvh;
+  background-color: rgb(255, 255, 255);
+  }
+  
+  
+  .img-contenido{
+  padding: 1px;
+  width: 125px;
+  height: 99px;
+  animation: slideleft 1s ease-out forwards;
+  }
+  
+  .img1{
+    width: 110px;
+    opacity: 0;
+  }
+  
+  .img2{
+    width: 105px;
+    opacity: 0;
+    margin-left: -11px;
+  }
+  
+  .img3{
+    width: 115px;
+    height: 100px;
+    opacity: 0;
+  }
+  
+  @keyframes slideleft {
+    0% {
+      transform: translateX(50px); /* Desplazamiento inicial hacia abajo */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* Sin desplazamiento vertical */
+      opacity: 1;
+    }
+  }
+  
+  /* Agregar un retraso a cada tarjeta para crear un efecto secuencial */
+  .contenido-cel img:nth-child(1) {
+    animation-delay: 2s;
+  }
+  .contenido-cel img:nth-child(2) {
+    animation-delay: 3s;
+  }
+  .contenido-cel img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  
+  
+  .box-1 h6{
+    font-size: 18px;
+    color: rgb(39, 39, 39);
+    text-align: center;
+  }
+  
+  .box-1 p{
+    font-size: 15px;
+    color: rgb(27, 27, 27);
+    padding: 5px;
+    margin-top: -20px;
+  }
+  
+  .box-3 h6{
+    font-size: 18px;
+    color: rgb(39, 39, 39);
+    text-align: center;
+  }
+  
+  .box-3 p{
+    font-size: 15px;
+    color: rgb(27, 27, 27);
+    padding: 5px;
+    margin-top: -11%;
+  }
+  
+  /*FOOTER*/
+  
+  .logo-foot img{
+    width: 245px;
+    position: absolute;
+    left: 34%;
+    top: 197%;
+    animation: slideInFromBottom 4s ease forwards;
+  }
+  
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .footer {
+    height: 50dvh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 19px;
+  }
+  
+  .section p{
+    font-size: 16px;
+    animation: slideleft 4s ease-out forwards;
+  }
+  
+  
+  .sec1foot h2 {
+    font-size: 19px;
+  }
+  
+  .sec1foot p{
+    font-size: 16px;
+    animation: slideleft 4s ease-out forwards;
+  }
+  
+  
+  .sec2foot {
+    margin-top: 5%;
+  }
+  
+  .sec1foot{
+    margin-top: -4%;
+  }
+  
+  .sec3foot {
+    margin-top: 2%;
+  }
+  
+  
+  .section-redes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .social-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    animation: slideleft 5s ease-out forwards;
+  
+  }
+  
+  .social-links li i{
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  .fa-brands{
+    font-size: 30px;
+    animation: slideleft 5s ease-out forwards;
+  }
+  
+  .container-secciones{
+    width: 100%;
+    height: 40dvh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 1px black;
+  }
+  
+  @keyframes slideleft {
+    0% {
+      transform: translateX(50px); /* Desplazamiento inicial hacia abajo */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* Sin desplazamiento vertical */
+      opacity: 1;
+    }
+  }
+  .barra-foot{
+    display: none;
+  }
+  
+  }
+  
+  /*MEDIA LAPTOP*/
+  
+  @media screen and (min-width: 1024px)
+  {
+  
+    header{
+      height: 14dvh;
+    }
+    
+    .logo-header{
+      width: 200px;
+    }
+    
+    
+    .menu {
+      width: 100%;
+      height: 17dvh;
+      display: block;
+      background-color:#04b4bc;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .menu-items {
+      margin-top: 7dvh;
+      margin-right:1%;
+      gap: 25px;
+      font-size: 17px;
+    }
+    
+    
+    /*SECCION COMO LO HACEMOS*/
+    
+   .sec-comolohacemos h2{
+    left: 40%;
+   }
+
+.container-comohacemos{
+  width: 80%;
+  height: 65%;
+  margin-top: 25%;
+}
+.contenedor-video {
+  position: relative;
+  top: -60%;
+  width: 80%;
+  height: 80%;
+  background-color:var(--color-primary);
+  animation: appearFromBottom 3s ease forwards; 
+  }  
+
+  .box-1{
+    left: 25%;
+  }
+    
+    
+    /* BUTTON IDIOMAS */
+    .radio-inputs {
+      position: relative;
+      top: -7.8dvh;
+      left: -0.1%;
+      font-size: 13px;
+    }
+
+
+    
+    /*------------FOOTER---------*/
+    .footer {
+      height: 48dvh;
+    }
+    .logo-foot img{
+      width: 245px;
+      position: absolute;
+      left: 40%;
+      top: 197%;
+      animation: slideInFromBottom 4s ease forwards;
+    }
+    
+    .sec2foot {
+      margin-top: 2%;
+    }
+    
+    .sec1foot{
+      margin-top: -3%;
+    }
+    
+    .sec3foot {
+      margin-top: -0.5%;
+    }
+    }
+  
+    
+  
+  /*-------------------MEDIA DESKTOP ------------------*/
+  
+  @media screen and (min-width: 1240px){
+    
+    .logo-header{
+      width: 260px;
+    }
+    
+  header{
+    height: 18dvh;
+  }
+  
+  
+  .menu {
+    width: 100%;
+    height: 18dvh;
+    align-items: center;
+  }
+  
+  .menu-items {
+    margin-top: 9.5dvh;
+    margin-right:4%;
+    gap: 25px;
+    font-size: 20px;
+  }
+  
+  
+  .radio-inputs {
+    position: relative;
+    top: -7.5dvh;
+    left: 4%;
+    width: 75px;
+    font-size: 15.5px;
+  }
+  /*SECCION COMO LO HACEMOS*/
+  
+  .sec-comolohacemos{
+    width: 100%;
+    height: 220dvh;
+  }
+  
+  .fondo-titulo{
+    width: 100%;
+    height: 30dvh;
+    background-image: url(../img-comolohacemos/nosotros.jpg);
+    background-size: cover;
+    background-position:center;
+    position: absolute;
+    top: 26%;
+  }
+  
+  .sec-comolohacemos h2{
+    left: 40%;
+    top: 35%;
+    font-size: 35px;
+  }
+  
+  .box-1{
+    width: 400px;
+    height: 300px;
+    background-color:#04b3bc36;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
+    border-radius: 5%;
+    opacity: 0;
+    animation: appearFromBottom 2s ease forwards; 
+    position: absolute;
+    top: 135%;
+    left: 45%;
+    text-align: center;
+    }
+  
+    .box-1 h6{
+      font-size: 21px;
+    }
+  
+    .box-1 p{
+    font-size: 18px;
+    padding-top: 3%;  
+    }
+  
+    .box-3 h6{
+      font-size: 21px;
+    }
+  
+    .box-3 p{
+      font-size: 18px;
+    padding-top: 8%; 
+    }
+    
+    .box-3{
+      display: block;
+      width: 400px;
+      height: 300px;
+      background-color:#04b3bc36;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
+      border-radius: 5%;
+      opacity: 0;
+      animation: appearFromBottom 2s ease forwards; 
+      position: absolute;
+      top: 125%;
+      text-align: center;
+    }
+    
+    .box-2{
+    width: 250px;
+    height: 350px;
+    background-color: transparent;
+    position: absolute;
+    top: 1%;
+    left: 98%;
+    }
+  
+    .img-cel{
+      width: 400px;
+      height: 450px;
+    }
+    
+    .contenido-cel{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: -405px;
+      left: 95px;
+      width: 25dvh;
+      height: 42dvh;
+      background-color: rgb(255, 255, 255);
+    }
+  
+  
+.container-comohacemos{
+  width: 100%;
+  height: 75%;
+  margin-top: 25%;
+}
+.contenedor-video {
+  position: relative;
+  top: -60%;
+  width: 80%;
+  height: 80%;
+  background-color:var(--color-primary);
+  animation: appearFromBottom 3s ease forwards; 
+  }  
+
+  /*------------FOOTER---------*/
+  .footer {
+    height: 48dvh;
+  }
+  .logo-foot img{
+    width: 300px;
+    position: absolute;
+    left: 40%;
+    top: 240%;
+    animation: slideInFromBottom 4s ease forwards;
+  }
+  
+  .container-secciones{
+    width: 80%;
+  }
+  
+  .sec2foot {
+    margin-top: 1%;
+  }
+  .sec2foot h2{
+    font-size: 22px;
+  }
+  .sec2foot p{
+    font-size: 18px;
+  }
+  .sec1foot{
+    margin-top: -4%;
+  }
+  .sec1foot h2{
+    font-size: 22px;
+  }
+  .sec1foot p{
+    font-size: 18px;
+  }
+  
+  .sec3foot {
+    margin-top: -3%;
+  }
+  .sec3foot h2{
+    font-size: 22px;
+  }
+  .sec3foot p{
+    font-size: 18px;
+  }
+  
+  }
+  
