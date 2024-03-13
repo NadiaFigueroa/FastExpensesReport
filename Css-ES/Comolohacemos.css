@@ -1,4 +1,4 @@
-@import url(./normalize.css);
+@import url(../normalize.css);
 
 @media screen and (min-width: 320px) {
 
@@ -1233,5 +1233,28 @@ header{
 .sec3foot p{
   font-size: 18px;
 }
+
+}
+
+@media screen and (min-width: 1440px){
+  
+  .container-comohacemos{
+    width: 80%;
+    height: 80%;
+  }
+  
+.contenedor-video {
+  position: relative;
+  top: -90%;
+  width: 40%;
+  height: 150%;
+  background-color:var(--color-primary);
+  animation: appearFromBottom 3s ease forwards; 
+}
+
+.box-3{
+  margin-left: -30%;
+}
+
 
 }

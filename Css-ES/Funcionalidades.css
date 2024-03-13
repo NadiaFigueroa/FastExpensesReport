@@ -1,6 +1,6 @@
-@import url(./normalize.css);
+@import url(../normalize.css);
 
-@media (min-width: 320px) {
+@media screen and  (min-width: 320px) {
 
 
   :root{
@@ -939,7 +939,7 @@ header{
 }
 
 
-@media (min-width: 1024px)
+@media screen and  (min-width: 1024px)
 {
   header{
     height: 14dvh;

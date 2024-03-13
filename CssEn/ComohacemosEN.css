@@ -1201,4 +1201,27 @@
   }
   
   }
+
+  @media screen and (min-width: 1440px){
+  
+    .container-comohacemos{
+      width: 80%;
+      height: 80%;
+    }
+    
+  .contenedor-video {
+    position: relative;
+    top: -90%;
+    width: 40%;
+    height: 150%;
+    background-color:var(--color-primary);
+    animation: appearFromBottom 3s ease forwards; 
+  }
+  
+  .box-3{
+    margin-left: -30%;
+  }
+  
+  
+  }
   

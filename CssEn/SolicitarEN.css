@@ -360,7 +360,7 @@ input, select, textarea {
 }
 
 }
-@media (min-width: 425px){
+@media screen and (min-width: 425px){
 
   form{
     width: 95%;
@@ -391,7 +391,7 @@ input, select, textarea {
   }
 }
 
-@media (min-width: 768px){
+@media screen and (min-width: 768px){
 
   .logo-header {
     width: 190px;
@@ -709,7 +709,7 @@ input, select, textarea {
   }
 }
 
-@media (min-width: 1024px)
+@media screen and (min-width: 1024px)
 {
   header{
     height: 14dvh;
@@ -937,4 +937,17 @@ form {
   font-size: 18px;
 }
 
+}
+
+@media screen and (min-width: 1440px){
+ 
+  form{
+    width: 45%;
+    top: -45%;
+  }
+
+  .container-img-texto{
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
 }

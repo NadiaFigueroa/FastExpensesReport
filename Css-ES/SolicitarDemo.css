@@ -1,4 +1,4 @@
-@import url(./normalize.css);
+@import url(../normalize.css);
 
 @media screen and (min-width: 320px) {
 
@@ -500,7 +500,7 @@ font-size: 17px;
 color: rgb(255, 255, 255);
 font-size: 34px;
 position: absolute;
-text-align: center;
+left: 35%;
 animation: slideleft 2s ease-out forwards;
 }
 
@@ -943,4 +943,17 @@ form {
   font-size: 18px;
 }
 
+}
+
+@media screen and (min-width: 1440px){
+ 
+  form{
+    width: 45%;
+    top: -45%;
+  }
+
+  .container-img-texto{
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
 }
